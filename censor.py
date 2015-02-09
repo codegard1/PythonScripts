@@ -21,7 +21,7 @@ def censor(text, censor_word):
         if word.lower() == censor_word.lower():
             words[i] = '*' * len(word)
         i += 1
-    return ' '.join(result)
+    return ' '.join(words)
 
 t = 'Once there was a man whose men were men and whose man was a men'
 w = 'man'
