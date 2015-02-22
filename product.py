@@ -7,17 +7,12 @@
 # Your function should return an integer.
 
 def product(integers = []):
-    n = integers[0]
-    for i in range(len(integers) - 1):
-        print(i, integers[i], '*', n) #debugging
-        if (i == 0):
-            i = 1
-        if i == len(integers):
-            break #to avoid overflowing the list
-        n = n * integers[i]
-    return n
+    m = integers.pop()
+    for n in integers:
+        m *= n 
+    return m
 
-num = [1,2]
+num = [4,5,5]
 print(str(product(num)))
 
 num = [6,8,12,2]
