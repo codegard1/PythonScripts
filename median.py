@@ -18,11 +18,11 @@ def median(listylist = []):
     #if the length is odd then the middle is floor(half) +  1
     #if the length is even then the middle is (half + (half+1)) / 2
     if lengthylength % 2 == 0: #even
-        half = [((lengthylength / 2) - 1), (lengthylength / 2)]
-        median = (listylist[int(half[0])] + listylist[int(half[1])]) / 2
+        middle = [((lengthylength / 2) - 1), (lengthylength / 2)]
+        median = (listylist[int(middle[0])] + listylist[int(middle[1])]) / 2
     else: #odd
-        half = int(math.floor(lengthylength / 2))
-        median = listylist[half]    
+        middle = int(math.floor(lengthylength / 2))
+        median = listylist[middle]    
     return median
 
 #inputlist = [9,8,5,6,7,4,3,8,5,4,5,10,11,29,89,4,44,35,678,54,3,5,7,8,9,1,2,22,23,24,25] #median 8
@@ -31,5 +31,5 @@ def median(listylist = []):
 #inputlist = [3,3.7,3.95,4.1001,5] #median 3.95
 #inputlist = [4,5,5,4] #median 4.5
 #inputlist = [1,34,1,6,8,0]
-inputlist = [2,103]
+inputlist = [2,103] #median 52.5
 print('Median:', median(inputlist))
