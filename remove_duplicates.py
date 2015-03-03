@@ -10,27 +10,22 @@
 # Do not modify the list you take as input! Instead,
 # return a new list.
 
+#method 1, version 2: iterate over the list and add what's not already in output
 def remove_duplicates(listy_list = []):
     output = []
-    n = 0 #number of items added to list
-    n2 = 1 #number of comparisons done
-    
-    for i in listy_list: #check if item is in output already
-        print('output:', output)
-        print(str(n)+'.'+str(n2))
-        for m in output:
-            print("\tcomparing", m, '&', i) #debug
-            n2 += 1
-            if m == i:
-                print("\t", m, 'equals', i, 'so break')
-                break
-            else:
-                print("\t", m, 'does not equal', i)
-        else:
+    for i in listy_list:
+        if i not in output:
             output.append( i )
-            n += 1
     return output
 
 input1 = [1,2,3,3,4,4,5,6,1,2,6,8,9,10,10,1,2,3,4,5,6,7,8]
-print('input: ', input1)
-print(remove_duplicates(input1))
+print("input:", input1)
+print("\noutput:",remove_duplicates(input1))
+
+#method 2: create a set from input and return
+#this is the most efficient way to solve the problem
+#because a set by definition has no duplicate items
+def remmy_dupe(listy_q_listerson = []):
+    return list(set(listy_q_listerson))
+
+print("\noutput2:",remmy_dupe(input1))
